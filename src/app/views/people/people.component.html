@@ -1,0 +1,52 @@
+<div class="animated fadeIn">
+  <div class="row my-4 d-flex justify-content-center">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <p-table [value]="peoples" class="table table-striped" [paginator]="true" [rows]="10"
+                [showCurrentPageReport]="true" currentPageReportTemplate="Total de Registros: {{totalRecords}}">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>Personagem</th>
+                    <th>Filmes</th>
+                    <th>Ano de Nascimento</th>
+                    <th>Planeta Natal</th>
+                    <th>Espécie</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-people>
+                  <tr>
+                    <td>{{people.name}}</td>
+                    <td>{{people.films}}</td>
+                    <td>{{people.birth_year}}</td>
+                    <td>{{people.homeworld}}</td>
+                    <td>{{people.species}}</td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
