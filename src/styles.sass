@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap')
+
+.sidebar
+  display: flex
+  flex-direction: column
+  width: 100%
+  align-items: center
+  font-size: 1rem
+  font-family: 'Dela Gothic One', cursive
+  color: #fff
+
+.icon
+  // margin-bottom: 30px
+  width: 50px
+
+.wrapper
+  overflow-x: hidden
+
+.sidebar-wrapper
+  min-height: 100vh
+  margin-left: -15rem
+  -webkit-transition: margin .25s ease-out
+  -moz-transition: margin .25s ease-out
+  -o-transition: margin .25s ease-out
+  transition: margin .25s ease-out
+  background-color: #000
+  flex-direction: column
+
+  & a
+    text-decoration: none
+    color: #fff
+
+  & .sidebar-heading
+    padding: 0.875rem 1.25rem
+    font-size: 1.2rem
+
+  & .list-group
+    width: 15rem
+
+.page-content-wrapper
+  min-width: 100vw
+  background-color: #2e2e40
+  background-image: url('assets/img/background-stars.png')
+
+.wrapper.toggled .sidebar-wrapper
+  margin-left: 0
+
+@media (min-width: 768px)
+  .sidebar-wrapper
+    margin-left: 0
+
+  .page-content-wrapper
+    min-width: 0
+    width: 100%
+
+  .wrapper.toggled .sidebar-wrapper
+    margin-left: -15rem
+
+.font-white
+  color: #fff
+  font-weight: bold
