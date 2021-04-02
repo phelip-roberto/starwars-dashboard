@@ -14,4 +14,13 @@ export class FilmsService {
   getFilms() {
     return this.httpClient.get(this.env + "/films");
   }
+
+  filterGetFilms(filters) {
+    return this.httpClient.get(this.env + "/films?" + filters);
+  }
+
+  getFilmById(id) {
+    return this.httpClient.get(this.env + "/films?episode_id=" + id)
+  }
+
 }

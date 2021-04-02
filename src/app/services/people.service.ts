@@ -14,4 +14,8 @@ export class PeopleService {
   getPeoples() {
     return this.httpClient.get(this.env + "/people");
   }
+
+  filterGetPeoples(filters) {
+    return this.httpClient.get(this.env + "/people?" + filters);
+  }
 }
