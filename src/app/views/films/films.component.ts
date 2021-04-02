@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmsService } from 'src/app/services/films.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-films',
@@ -13,14 +14,14 @@ export class FilmsComponent implements OnInit {
   display: boolean = false;
   episode_id: any;
 
-  constructor(private filmsService: FilmsService) { }
+  constructor(private filmsService: FilmsService, private router: Router) { }
 
   ngOnInit() {
 
     this.filmsService.getFilms()
       .subscribe(
         response => {
-          this.films = response;
+          this.fillData(response);
         }
       )
   }
@@ -54,9 +55,8 @@ export class FilmsComponent implements OnInit {
     this.films = data;
   }
 
-  openModal(episode_id) {
-    this.episode_id = episode_id;
-    this.display = true;
+  redirect(episode_id) {
+    this.router.navigate(['/film', episode_id]);
   }
 
 }

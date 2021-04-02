@@ -1,37 +1,5 @@
 <div class="animated fadeIn">
   <div class="row my-4 d-flex justify-content-center">
-    <div class="col-10 mx-auto">
-      <div class="row">
-        <div class="col-12">
-          <form #filterForm="ngForm" (ngSubmit)="filterFilms(filterForm.value)">
-            <div class="row">
-              <div class="col-md-5 col-sm-5 col-12">
-                <label class="font-white" for="name">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome" ngModel name="name" id="name">
-              </div>
-              <div class="col-md-2 col-sm-2 col-3">
-                <label class="font-white" for="gender">Gênero</label>
-                <select class="form-control" id="gender" ngModel name="gender">
-                  <option value="" selected>Todos</option>
-                  <option value="male">Homem</option>
-                  <option value="female">Mulher</option>
-                  <option value="n/a">N/A</option>
-                </select>
-              </div>
-              <div class="col-md-2 col-sm-2 col-3">
-                <label class="font-white" for="skin_color">Cor da Pele</label>
-                <input type="text" class="form-control" placeholder="Cor da Pele" ngModel name="skin_color"
-                  id="skin-color">
-              </div>
-              <div class="col-12 d-flex justify-content-end">
-                <button type="submit" class="btn btn-square btn-danger mr-2">Filtrar</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <div class="col-10 mt-5 mx-auto">
       <div class="card">
         <div class="card-body">
@@ -55,7 +23,7 @@
                   <td>{{film.director}}</td>
                   <td>{{film.producer}}</td>
                   <td>{{film.release_date}}</td>
-                  <td><i (click)="openModal(film.episode_id)" class="pi pi-search btn"></i></td>
+                  <td><i (click)="redirect(film.episode_id)" class="pi pi-search btn"></i></td>
                 </tr>
               </ng-template>
             </p-table>
@@ -65,5 +33,3 @@
     </div>
   </div>
 </div>
-
-<app-modal-film [display]="display" [id]="episode_id"></app-modal-film>

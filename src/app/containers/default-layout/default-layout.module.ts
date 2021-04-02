@@ -7,15 +7,16 @@ import { PeopleComponent } from 'src/app/views/people/people.component';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-import { ModalFilmComponent } from 'src/app/views/modal/modal-film.component';
-import { DialogModule } from 'primeng/dialog';
+import { FilterFilmComponent } from 'src/app/views/film/filter-film.component';
+import { InfoFilmComponent } from 'src/app/views/film/info-film.component';
 
 @NgModule({
   declarations: [
     DefaultLayoutComponent,
     FilmsComponent,
     PeopleComponent,
-    ModalFilmComponent
+    FilterFilmComponent,
+    InfoFilmComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,6 @@ import { DialogModule } from 'primeng/dialog';
     TableModule,
     FormsModule,
     DropdownModule,
-    DialogModule
   ]
 })
 export class DefaultLayoutModule { }
