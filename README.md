@@ -45,7 +45,7 @@ Copy all your files to your project folder and then:
 
 ``` bash
 #go into app's directory
-$ cd HST7
+$ cd starwars-dashboard
 
 # install app's dependencies
 $ npm install
@@ -55,6 +55,7 @@ $ npm install
 ``` bash
 # run at localhost:3000 the json server thats consumes db.json
 $ npm run server
+
 # serve at localhost:4200 with the proxy configuration for the use of the services
 $ npm start
 
